@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import datetime # タイムスタンプ用
 
-# カフェ・なごみの状況に関するテキスト
+# カフェ・星稜の状況に関するテキスト
 nagomi_cafe_text = """
-「カフェ・なごみ」は、閑静な住宅街の一角で15年間営業を続ける、地域密着型の個人経営カフェです。店主の山田さんが一人で切り盛りしており、木の温もりを感じられる落ち着いた店内にはカウンター席とテーブル席が合わせて18席あります。主な顧客層は近隣に住む主婦や高齢者で、リピーターが多く、顧客との会話を大切にする山田さんの人柄もあって、常連客にとっては憩いの場となっています。
+「カフェ・星稜」は、閑静な住宅街の一角で15年間営業を続ける、地域密着型の個人経営カフェです。店主の山田さんが一人で切り盛りしており、木の温もりを感じられる落ち着いた店内にはカウンター席とテーブル席が合わせて18席あります。主な顧客層は近隣に住む主婦や高齢者で、リピーターが多く、顧客との会話を大切にする山田さんの人柄もあって、常連客にとっては憩いの場となっています。
 
 看板メニューは、山田さんが厳選した豆を使い一杯ずつ丁寧に淹れるハンドドリップコーヒーと、手作りのケーキやスコーンです。特に、季節の果物を使った自家製ジャムを添えたスコーンセットは人気で、これを目当てに訪れる顧客も少なくありません。顧客の平均滞在時間は比較的長く、ゆったりとした時間を過ごしてもらうことを重視しているため、座席回転率は低いのが特徴です。客単価は平均1,000円程度です。
 
@@ -15,7 +15,7 @@ nagomi_cafe_text = """
 山田さんは、現状を打破するために、SNSでの情報発信を強化したり、テイクアウトメニューの種類を増やしたりといった施策を始めていますが、一人での運営のため、大きな変革には踏み出せていません。常連客を大切にしながらも、新たな収益源を確保し、コスト上昇分を吸収していくための方策が急務となっています。
 """
 
-# カフェ・なごみ 貸借対照表データ (令和3年度末、令和4年度末、単位：千円)
+# カフェ・星稜 貸借対照表データ (令和3年度末、令和4年度末、単位：千円)
 # 固定資産回転率悪化を強調した版の数値を使用
 data_bs_nagomi_r3 = {
     '資産の部': ['流動資産', ' 現金及び預金', ' 売掛金', ' 棚卸資産', '固定資産', ' 有形固定資産', '資産合計'],
@@ -42,7 +42,7 @@ data_bs_nagomi_r4_liab_net = {
 df_bs_nagomi_r4_liab_net = pd.DataFrame(data_bs_nagomi_r4_liab_net)
 
 
-# カフェ・なごみ 損益計算書データ (令和3年度、令和4年度、単位：千円)
+# カフェ・星稜 損益計算書データ (令和3年度、令和4年度、単位：千円)
 data_pl_nagomi = {
     '項目': ['売上高', '売上原価', '売上総利益', '販売費及び一般管理費', '営業利益', '営業外収益', '営業外費用', '経常利益', '税引前当期純利益', '法人税等', '当期純利益'],
     '令和3年度': [6000, 1800, 4200, 2800, 1400, 15, 65, 1350, 1350, 270, 1080],
@@ -64,13 +64,13 @@ with st.sidebar.expander("📝 記述問題のポイント解説", expanded=Fals
     課題の記述問題に取り組む上での考え方のヒントです。
 
     1.  **着眼点を見つける**
-        * カフェ・なごみのどの効率性指標が、過去（令和3年度と比較して令和4年度に）特に悪化したか？
-        * 「カフェ・なごみの状況」の文章の中に、その悪化の原因や背景を示唆する記述はどこにあるか？
+        * カフェ・星稜のどの効率性指標が、過去（令和3年度と比較して令和4年度に）特に悪化したか？
+        * 「カフェ・星稜の状況」の文章の中に、その悪化の原因や背景を示唆する記述はどこにあるか？
         * （例：高額なエスプレッソマシンの未活用、食材の廃棄ロス、売上の低迷など）
         * なぜそれが経営課題と言えるのか？ 将来にどのような影響があるか？
 
     2.  **論理的に説明する**
-        * 「カフェ・なごみの【指標名】は令和3年度の【数値A】から令和4年度には【数値B】へと【良化/悪化】した。これは【企業の状況D】が影響し、【指標の構成要素E】が【変動した状態】であるため、【Fのような経営状態】を示している。その結果、将来の【Gという計画】の実行が困難になる、あるいは【Hという問題】が悪化する」
+        * 「カフェ・星稜の【指標名】は令和3年度の【数値A】から令和4年度には【数値B】へと【良化/悪化】した。これは【企業の状況D】が影響し、【指標の構成要素E】が【変動した状態】であるため、【Fのような経営状態】を示している。その結果、将来の【Gという計画】の実行が困難になる、あるいは【Hという問題】が悪化する」
         * というように、具体的な数値、企業の状況、指標の意味、将来への影響を結びつけて説明しましょう。
 
     3.  **指定された形式・文字数でまとめる**
@@ -79,7 +79,7 @@ with st.sidebar.expander("📝 記述問題のポイント解説", expanded=Fals
     """)
 
 st.header('問題')
-st.markdown("カフェ・なごみの状況と財務諸表（令和3年度・令和4年度）を踏まえ、カフェ・なごみの経営課題を最も適切に捉えている効率性に関する財務指標を１つ選択し、その理由について60字～90字程度で述べよ。")
+st.markdown("カフェ・星稜の状況と財務諸表（令和3年度・令和4年度）を踏まえ、カフェ・星稜の経営課題を最も適切に捉えている効率性に関する財務指標を１つ選択し、その理由について60字～90字程度で述べよ。")
 st.markdown("---")
 
 # session_stateの初期化
@@ -92,12 +92,12 @@ if 'start_time_nagomi_ts' not in st.session_state: # キー名を変更
 tab1, tab2, tab3 = st.tabs(["企業の状況と財務諸表", "財務指標の計算", "課題への取り組み"])
 
 with tab1:
-    st.header('カフェ・なごみの状況')
+    st.header('カフェ・星稜の状況')
     st.markdown(nagomi_cafe_text)
     st.markdown("---")
     st.header('財務諸表（単位：千円）')
 
-    st.subheader('カフェ・なごみ')
+    st.subheader('カフェ・星稜')
     col_nagomi_bs, col_nagomi_pl = st.columns(2)
     with col_nagomi_bs:
         st.markdown("##### 貸借対照表（令和3年度末・令和4年度末）")
@@ -115,11 +115,11 @@ with tab1:
         st.markdown("##### 損益計算書（令和3年度・令和4年度）")
         st.dataframe(df_pl_nagomi.set_index('項目'))
 
-    st.info("上記のテキストと財務諸表をよく読んで、カフェ・なごみの経営状況（特に効率性）を把握しましょう。過去の状況との比較が重要です。")
+    st.info("上記のテキストと財務諸表をよく読んで、カフェ・星稜の経営状況（特に効率性）を把握しましょう。過去の状況との比較が重要です。")
 
 with tab2:
     st.header('効率性分析 - 各種指標の計算')
-    st.markdown("以下の各効率性指標について、カフェ・なごみ（令和3年度・令和4年度）の財務諸表から適切な数値を入力してください。数値（千円単位）を入力すると、自動的に比率（回転数）が計算されます。")
+    st.markdown("以下の各効率性指標について、カフェ・星稜（令和3年度・令和4年度）の財務諸表から適切な数値を入力してください。数値（千円単位）を入力すると、自動的に比率（回転数）が計算されます。")
 
     def get_value(df_assets, df_liab_net, df_pl, item_name, part='資産', period_pl=None):
         try:
@@ -152,8 +152,8 @@ with tab2:
         results = {}
         
         company_data_map = {
-            'nagomi_r3': ('カフェ・なごみ (令和3年度)', df_bs_nagomi_r3_assets, df_bs_nagomi_r3_liab_net, df_pl_nagomi, '令和3年度'),
-            'nagomi_r4': ('カフェ・なごみ (令和4年度)', df_bs_nagomi_r4_assets, df_bs_nagomi_r4_liab_net, df_pl_nagomi, '令和4年度')
+            'nagomi_r3': ('カフェ・星稜 (令和3年度)', df_bs_nagomi_r3_assets, df_bs_nagomi_r3_liab_net, df_pl_nagomi, '令和3年度'),
+            'nagomi_r4': ('カフェ・星稜 (令和4年度)', df_bs_nagomi_r4_assets, df_bs_nagomi_r4_liab_net, df_pl_nagomi, '令和4年度')
         }
 
         for company_key, (company_name_display, df_assets, df_liab_net, df_pl, period_pl) in company_data_map.items():
@@ -194,8 +194,8 @@ with tab2:
         if 'nagomi_r3' in results and 'nagomi_r4' in results:
             nagomi_r3_res = results['nagomi_r3']
             nagomi_r4_res = results['nagomi_r4']
-            comparison_text_nagomi = f"カフェ・なごみ: 令和3年度 {nagomi_r3_res:.2f}{unit} → 令和4年度 {nagomi_r4_res:.2f}{unit}"
-            st.markdown(f"**なごみ 時系列比較:** {comparison_text_nagomi}")
+            comparison_text_nagomi = f"カフェ・星稜: 令和3年度 {nagomi_r3_res:.2f}{unit} → 令和4年度 {nagomi_r4_res:.2f}{unit}"
+            st.markdown(f"**星稜 時系列比較:** {comparison_text_nagomi}")
 
     # 固定資産回転率
     show_efficiency_ratio_calculation(
@@ -216,7 +216,7 @@ with tab2:
         lambda v: v['uriage'] / v['soushisan'] if v['uriage'] is not None and v['soushisan'] is not None and v['soushisan'] != 0 else None
     )
     
-    st.info("**考察のポイント：**\n* カフェ・なごみの各効率性指標は、令和3年度から令和4年度にかけてどのように変化しましたか？\n* テキストで述べられているカフェ・なごみの状況や経営者の懸念は、どの指標に表れていますか？")
+    st.info("**考察のポイント：**\n* カフェ・星稜の各効率性指標は、令和3年度から令和4年度にかけてどのように変化しましたか？\n* テキストで述べられているカフェ・星稜の状況や経営者の懸念は、どの指標に表れていますか？")
 
 with tab3:
     st.header('記述問題への取り組み')
@@ -262,14 +262,14 @@ with tab3:
                 if nagomi_r3_val is not None or nagomi_r4_val is not None:
                     calculated_ratios_summary += f"- {ratio_name_jp}:\n"
                     if nagomi_r3_val is not None:
-                        calculated_ratios_summary += f"  カフェ・なごみ (R3): {nagomi_r3_val:.2f}回\n"
+                        calculated_ratios_summary += f"  カフェ・星稜 (R3): {nagomi_r3_val:.2f}回\n"
                     if nagomi_r4_val is not None:
-                        calculated_ratios_summary += f"  カフェ・なごみ (R4): {nagomi_r4_val:.2f}回\n"
+                        calculated_ratios_summary += f"  カフェ・星稜 (R4): {nagomi_r4_val:.2f}回\n"
                     any_ratio_calculated = True
             if not any_ratio_calculated:
                 calculated_ratios_summary += "計算された財務指標はありませんでした。\n"
             
-            submission_file_content = f"""## カフェ・なごみ 経営分析 課題取り組み内容
+            submission_file_content = f"""## カフェ・星稜 経営分析 課題取り組み内容
 
 **提出日時:** {timestamp_str_for_text}
 **学生ID:** {student_id_input_tab3 if student_id_input_tab3 else "未入力"}
